@@ -7,3 +7,4 @@ while i != 3:
     del my_dict[minKey]
     i += 1
 print(keysWithMinValue)
+# метод get возвращает найденное значение в словаре по ключу

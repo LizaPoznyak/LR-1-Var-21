@@ -1,9 +1,11 @@
 while True:
-    try:
-        string = input("Введите последовательность чисел, разделённых запятой :\n")
-        listOfNumbers = [int(num) for num in string.split(',') if num.isdigit()]
+    ch = ','
+    string = input("Введите последовательность чисел, разделённых запятой :\n")
+    if all((w.isdigit() or w == ch) for w in string):
+        listOfNumbers = string.split(',')
         break
-    except ValueError:
+    else:
         print("Некорректный ввод!")
+        continue
 tupleOfNumbers = tuple(listOfNumbers)
 print("Список : ", listOfNumbers, "\nКортеж : ", tupleOfNumbers)
